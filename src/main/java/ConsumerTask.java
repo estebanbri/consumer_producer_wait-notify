@@ -24,7 +24,7 @@ public class ConsumerTask implements Runnable {
         }
     }
 
-    public void consume() throws InterruptedException {
+    private void consume() throws InterruptedException {
         Thread.sleep(100);
         synchronized (sharedQueue) {
             LOG.info("Consumer Thread running...");

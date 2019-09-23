@@ -28,7 +28,7 @@ public class ProducerTask implements Runnable {
         }
     }
 
-    public void produce(int counter) throws InterruptedException {
+    private void produce(int counter) throws InterruptedException {
 
         synchronized (sharedQueue) {
             LOG.info("Producer Thread running...");
